@@ -88,20 +88,19 @@
     "result": "Proin-eget-nulla-justo.-"
   },
   {
-    "text": "Praesent ultricies lacus quis ultricies rhoncus",
-    "result": "Praesent-ultricies-lacus-quis-ultricies-rhoncus"
+    "text": "",
+    "result": ""
   },
   {
-    "text": "Praesent eu scelerisque elit, a semper tortor",
-    "result": "Praesent-eu-scelerisque-elit,-a-semper-tortor"
+    "text": 9275,
+    "result": ""
   },
   {
-    "text": "Nunc luctus nunc vitae viverra tincidunt. Sed fermentum aliquam magna et euismod.",
-    "result": "Nunc-luctus-nunc-vitae-viverra-tincidunt.-Sed-fermentum-aliquam-magna-et-euismod."
+    "text": "     Nunc luctus nunc vitae viverra tincidunt. Sed fermentum aliquam magna et euismod.",
+    "result": "-----Nunc-luctus-nunc-vitae-viverra-tincidunt.-Sed-fermentum-aliquam-magna-et-euismod."
   },
   {
-    "text": "Nullam blandit nulla sed sollicitudin dignissim",
-    "result": "Nullam-blandit-nulla-sed-sollicitudin-dignissim"
+    "result": ""
   },
   {
     "text": "Pellentesque aliquet malesuada auctor.",

@@ -4,7 +4,8 @@
   Exemplo saída: hoje-é-dia-de-aula-remota
 */
 function ex3(text) {
-  return text.split(" ").join("-");
+  if (typeof text == "string") return text.split(" ").join("-");
+  else return "";
 }
 
 /*
@@ -13,12 +14,12 @@ function ex3(text) {
   Exemplo saída: “hoje é meu dia preferido”
 */
 function ex4(text, number) {
-  let truncate_array = text.split(" ");
+  let truncate_array = typeof text == "string" ? text.split(" ") : [];
   let new_array = [];
   for (i = 0; i < number; i++) {
     new_array.push(truncate_array[i]);
   }
-  return new_array.join(" ");
+  return new_array.join(" ").trim();
 }
 
 /*
@@ -27,17 +28,19 @@ function ex4(text, number) {
   Exemplo saída: 2-876-418
 */
 function ex5(number) {
-  let number_array = String(number).split("");
-  let formated_number = "";
-  for (i = 0; i < number_array.length; i++) {
-    if (
-      Number(number_array[i]) % 2 == 0 &&
-      Number(number_array[i + 1]) % 2 == 0
-    )
-      formated_number += number_array[i] + "-";
-    else formated_number += number_array[i];
-  }
-  return formated_number;
+  if (!isNaN(parseFloat(number) && isFinite(number))) {
+    let number_array = String(parseFloat(number)).split("");
+    let formated_number = "";
+    for (i = 0; i < number_array.length; i++) {
+      if (
+        Number(number_array[i]) % 2 == 0 &&
+        Number(number_array[i + 1]) % 2 == 0
+      )
+        formated_number += number_array[i] + "-";
+      else formated_number += number_array[i];
+    }
+    return formated_number;
+  } else return 0;
 }
 
 /*
@@ -47,11 +50,18 @@ function ex5(number) {
 */
 
 function ex7(arr, arr2) {
-  let aux = arr.concat(arr2);
-  let new_arr = aux.filter(function (a, i) {
-    return aux.indexOf(a) === i;
+  if (Array.isArray(arr) && Array.isArray(arr2)) {
+    let aux = arr.concat(arr2);
+    return unique(aux);
+  } else if (Array.isArray(arr)) return unique(arr);
+  else if (Array.isArray(arr2)) return unique(arr2);
+  else return [];
+}
+// Função auxiliar do exercício 7, remove dados repetidos em um array
+function unique(array) {
+  return array.filter(function (a, i) {
+    return array.indexOf(a) === i;
   });
-  return new_arr;
 }
 
 module.exports = { ex3, ex4, ex5, ex7 };
