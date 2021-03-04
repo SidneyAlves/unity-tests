@@ -64,4 +64,42 @@ function unique(array) {
   });
 }
 
-module.exports = { ex3, ex4, ex5, ex7 };
+//Escreva uma função que calcule o número de vogais em uma string//
+
+function ex8(str){
+    
+   
+  let arr_vowel_list = 'aeiouáéíóúàãõêâôÁÉÍÓÚÃÕÀÂÊÔAEIOU'.split(''); 
+  let count = 0;
+  str.split('').forEach(function(e){
+  if(arr_vowel_list.indexOf(e) !== -1){
+   count++;} });
+
+
+   return count;
+  
+}
+
+/*
+Escreva uma função que some os dígitos do número recebido por parâmetro. Se o resultado
+desta soma for um número par, a função deve retornar “soma par”, caso contrário, se o
+resultado da soma for um número ímpar, a função deve retornar “soma ímpar” */
+
+function ex9(number) {
+
+  let sum = 0;
+  while (number) {
+      digit = number % 10;
+      sum += digit;
+      number = (number - digit) / 10;
+  }
+
+  if(sum % 2 == 0){
+     return 'Soma par';
+  } else {
+      return 'Soma ímpar';
+    }
+}
+
+
+module.exports = { ex3, ex4, ex5, ex7, ex8, ex9};
